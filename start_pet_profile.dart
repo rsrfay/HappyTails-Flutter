@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/pages/option_pet_select.dart';
 
 class StartPetProfilePage extends StatefulWidget {
   const StartPetProfilePage({Key? key}) : super(key: key);
@@ -47,7 +48,13 @@ class _StartPetProfilePageState extends State<StartPetProfilePage> {
             Container(
               margin: EdgeInsets.only(top: 20.0),
               child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const OptionPetPage()),
+                  );
+                },
                 color: const Color.fromARGB(255, 0, 74, 173),
                 icon: const Icon(Icons.add_circle_rounded, size: 42.0),
               ),
