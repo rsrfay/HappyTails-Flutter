@@ -43,327 +43,362 @@ class _OptionPetPageState extends State<OptionPetPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Color.fromRGBO(255, 255, 255, 1),
-        body: Center(
-          child: Container(
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                // Text at the top
-                Container(
-                  margin: EdgeInsets.only(top: 40.0),
-                  child: const Text(
-                    'Please choose your pet',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontStyle: FontStyle.italic,
-                    ),
-                  ),
-                ),
-                // Row 1
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    // Column 1
-                    Column(
-                      children: [
-                        TextButton(
-                          onPressed: () {
-                            setState(() {
-                              // If select again then change to -1 (no border), otherwise set to 0 (with border)
-                              _selectedButtonIndex =
-                                  _selectedButtonIndex == 0 ? -1 : 0;
-                            });
-                          },
-                          style: TextButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                              side: _selectedButtonIndex == 0
-                                  ? const BorderSide(
-                                      color: Color.fromARGB(
-                                          255, 0, 74, 173)) // Selected
-                                  : BorderSide.none, // Not selected
-                            ),
-                          ),
-                          child: Column(
-                            children: [
-                              Image.asset('images/dog.png', height: 120),
-                              const Text(
-                                'Dog',
-                                style: TextStyle(color: Colors.black),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    // Column 2
-                    Column(
-                      children: [
-                        TextButton(
-                          onPressed: () {
-                            setState(() {
-                              // If select again then change to -1 (no border), otherwise set to 1 (with border)
-                              _selectedButtonIndex =
-                                  _selectedButtonIndex == 1 ? -1 : 1;
-                            });
-                          },
-                          style: TextButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                              side: _selectedButtonIndex == 1
-                                  ? const BorderSide(
-                                      color: Color.fromARGB(
-                                          255, 0, 74, 173)) // Selected
-                                  : BorderSide.none, // Not selected
-                            ),
-                          ),
-                          child: Column(
-                            children: [
-                              Image.asset('images/cat.png', height: 120),
-                              const Text('Cat',
-                                style: TextStyle(color: Colors.black),),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                // Row 2
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    // Column 1
-                    Column(
-                      children: [
-                        TextButton(
-                          onPressed: () {
-                            setState(() {
-                              // If select again then change to -1 (no border), otherwise set to 2 (with border)
-                              _selectedButtonIndex =
-                                  _selectedButtonIndex == 2 ? -1 : 2;
-                            });
-                          },
-                          style: TextButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                              side: _selectedButtonIndex == 2
-                                  ? const BorderSide(
-                                      color: Color.fromARGB(
-                                          255, 0, 74, 173)) // Selected
-                                  : BorderSide.none, // Not selected
-                            ),
-                          ),
-                          child: Column(
-                            children: [
-                              Image.asset('images/hamster.png', height: 120),
-                              const Text('Hamster',
-                                style: TextStyle(color: Colors.black),),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    // Column 2
-                    Column(
-                      children: [
-                        TextButton(
-                          onPressed: () {
-                            setState(() {
-                              // If select again then change to -1 (no border), otherwise set to 3 (with border)
-                              _selectedButtonIndex =
-                                  _selectedButtonIndex == 3 ? -1 : 3;
-                            });
-                          },
-                          style: TextButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                              side: _selectedButtonIndex == 3
-                                  ? const BorderSide(
-                                      color: Color.fromARGB(
-                                          255, 0, 74, 173)) // Selected
-                                  : BorderSide.none, // Not selected
-                            ),
-                          ),
-                          child: Column(
-                            children: [
-                              Image.asset('images/snake1.png', height: 120),
-                              const Text('Snake',
-                                style: TextStyle(color: Colors.black),),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                // Row 3
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    // Column 1
-                    Column(
-                      children: [
-                        TextButton(
-                          onPressed: () {
-                            setState(() {
-                              // If select again then change to -1 (no border), otherwise set to 4 (with border)
-                              _selectedButtonIndex =
-                                  _selectedButtonIndex == 4 ? -1 : 4;
-                            });
-                          },
-                          style: TextButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                              side: _selectedButtonIndex == 4
-                                  ? const BorderSide(
-                                      color: Color.fromARGB(
-                                          255, 0, 74, 173)) // Selected
-                                  : BorderSide.none, // Not selected
-                            ),
-                          ),
-                          child: Column(
-                            children: [
-                              Image.asset('images/bird.png', height: 120),
-                              const Text('Bird',
-                                style: TextStyle(color: Colors.black),),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    // Column 2
-                    Column(
-                      children: [
-                        TextButton(
-                          onPressed: () {
-                            setState(() {
-                              // If select again then change to -1 (no border), otherwise set to 5 (with border)
-                              _selectedButtonIndex =
-                                  _selectedButtonIndex == 5 ? -1 : 5;
-                            });
-                          },
-                          style: TextButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                              side: _selectedButtonIndex == 5
-                                  ? const BorderSide(
-                                      color: Color.fromARGB(
-                                          255, 0, 74, 173)) // Selected
-                                  : BorderSide.none, // Not selected
-                            ),
-                          ),
-                          child: Column(
-                            children: [
-                              Image.asset('images/rabbit.png', height: 120),
-                              const Text('Rabbit',
-                                style: TextStyle(color: Colors.black),),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                // Row 4
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    // Column 1
-                    Column(
-                      children: [
-                        TextButton(
-                          onPressed: () {
-                            setState(() {
-                              // If select again then change to -1 (no border), otherwise set to 6 (with border)
-                              _selectedButtonIndex =
-                                  _selectedButtonIndex == 6 ? -1 : 6;
-                            });
-                          },
-                          style: TextButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                              side: _selectedButtonIndex == 6
-                                  ? const BorderSide(
-                                      color: Color.fromARGB(
-                                          255, 0, 74, 173)) // Selected
-                                  : BorderSide.none, // Not selected
-                            ),
-                          ),
-                          child: Column(
-                            children: [
-                              Image.asset('images/fish.png', height: 120),
-                              const Text('Fish',
-                                style: TextStyle(color: Colors.black),),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    // Column 2
-                    Column(
-                      children: [
-                        TextButton(
-                          onPressed: () {
-                            setState(() {
-                              // If select again then change to -1 (no border), otherwise set to 7 (with border)
-                              _selectedButtonIndex =
-                                  _selectedButtonIndex == 7 ? -1 : 7;
-                            });
-                          },
-                          style: TextButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                              side: _selectedButtonIndex == 7
-                                  ? const BorderSide(
-                                      color: Color.fromARGB(
-                                          255, 0, 74, 173)) // Selected
-                                  : BorderSide.none, // Not selected
-                            ),
-                          ),
-                          child: Column(
-                            children: [
-                              Image.asset('images/other.png', height: 120),
-                              const Text('Other',
-                                style: TextStyle(color: Colors.black),),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-
-                // Confirm button
-                Container(
-                  margin: EdgeInsets.only(top: 30.0),
-                  child: FilledButton(
-                    onPressed: () {
-                      setState(() {
-                        // If any option is selected (not -1), change the button color to blue, otherwise grey
-                        _selectedButtonIndex != -1
-                            ? _confirmButton = 0
-                            : _selectedButtonIndex = -1;
-                      });
-                      // function to get the name of the selected pet
-                      String selectedPetName = getSelectedPetName();
-                      print('Selected Pet: $selectedPetName');
-                    },
-                    style: ButtonStyle(
-                      backgroundColor: _selectedButtonIndex != -1
-                          ? MaterialStateProperty.all(
-                              Color.fromARGB(255, 0, 74, 173))
-                          : MaterialStateProperty.all(
-                              Color.fromARGB(255, 196, 196, 196)),
-                      minimumSize: MaterialStateProperty.all(
-                        Size(double.infinity, 40.0),
+        body: SingleChildScrollView(
+          child: Center(
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  // Text at the top
+                  Container(
+                    margin: EdgeInsets.only(top: 40.0),
+                    child: const Text(
+                      'Please choose your pet',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontStyle: FontStyle.italic,
                       ),
                     ),
-                    child: const Text('Confirm'),
                   ),
-                ),
-              ],
+                  // Row 1
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      // Column 1
+                      Column(
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              setState(() {
+                                // If select again then change to -1 (no border), otherwise set to 0 (with border)
+                                _selectedButtonIndex =
+                                    _selectedButtonIndex == 0 ? -1 : 0;
+                              });
+                            },
+                            style: TextButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                side: _selectedButtonIndex == 0
+                                    ? const BorderSide(
+                                        color: Color.fromARGB(
+                                            255, 0, 74, 173)) // Selected
+                                    : BorderSide.none, // Not selected
+                              ),
+                            ),
+                            child: Column(
+                              children: [
+                                Image.asset('assets/images/dog.png',
+                                    height: 120),
+                                const Text(
+                                  'Dog',
+                                  style: TextStyle(color: Colors.black),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      // Column 2
+                      Column(
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              setState(() {
+                                // If select again then change to -1 (no border), otherwise set to 1 (with border)
+                                _selectedButtonIndex =
+                                    _selectedButtonIndex == 1 ? -1 : 1;
+                              });
+                            },
+                            style: TextButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                side: _selectedButtonIndex == 1
+                                    ? const BorderSide(
+                                        color: Color.fromARGB(
+                                            255, 0, 74, 173)) // Selected
+                                    : BorderSide.none, // Not selected
+                              ),
+                            ),
+                            child: Column(
+                              children: [
+                                Image.asset('assets/images/cat.png',
+                                    height: 120),
+                                const Text(
+                                  'Cat',
+                                  style: TextStyle(color: Colors.black),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  // Row 2
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      // Column 1
+                      Column(
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              setState(() {
+                                // If select again then change to -1 (no border), otherwise set to 2 (with border)
+                                _selectedButtonIndex =
+                                    _selectedButtonIndex == 2 ? -1 : 2;
+                              });
+                            },
+                            style: TextButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                side: _selectedButtonIndex == 2
+                                    ? const BorderSide(
+                                        color: Color.fromARGB(
+                                            255, 0, 74, 173)) // Selected
+                                    : BorderSide.none, // Not selected
+                              ),
+                            ),
+                            child: Column(
+                              children: [
+                                Image.asset('assets/images/hamster.png',
+                                    height: 120),
+                                const Text(
+                                  'Hamster',
+                                  style: TextStyle(color: Colors.black),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      // Column 2
+                      Column(
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              setState(() {
+                                // If select again then change to -1 (no border), otherwise set to 3 (with border)
+                                _selectedButtonIndex =
+                                    _selectedButtonIndex == 3 ? -1 : 3;
+                              });
+                            },
+                            style: TextButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                side: _selectedButtonIndex == 3
+                                    ? const BorderSide(
+                                        color: Color.fromARGB(
+                                            255, 0, 74, 173)) // Selected
+                                    : BorderSide.none, // Not selected
+                              ),
+                            ),
+                            child: Column(
+                              children: [
+                                Image.asset('assets/images/snake1.png',
+                                    height: 120),
+                                const Text(
+                                  'Snake',
+                                  style: TextStyle(color: Colors.black),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  // Row 3
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      // Column 1
+                      Column(
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              setState(() {
+                                // If select again then change to -1 (no border), otherwise set to 4 (with border)
+                                _selectedButtonIndex =
+                                    _selectedButtonIndex == 4 ? -1 : 4;
+                              });
+                            },
+                            style: TextButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                side: _selectedButtonIndex == 4
+                                    ? const BorderSide(
+                                        color: Color.fromARGB(
+                                            255, 0, 74, 173)) // Selected
+                                    : BorderSide.none, // Not selected
+                              ),
+                            ),
+                            child: Column(
+                              children: [
+                                Image.asset('assets/images/bird.png',
+                                    height: 120),
+                                const Text(
+                                  'Bird',
+                                  style: TextStyle(color: Colors.black),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      // Column 2
+                      Column(
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              setState(() {
+                                // If select again then change to -1 (no border), otherwise set to 5 (with border)
+                                _selectedButtonIndex =
+                                    _selectedButtonIndex == 5 ? -1 : 5;
+                              });
+                            },
+                            style: TextButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                side: _selectedButtonIndex == 5
+                                    ? const BorderSide(
+                                        color: Color.fromARGB(
+                                            255, 0, 74, 173)) // Selected
+                                    : BorderSide.none, // Not selected
+                              ),
+                            ),
+                            child: Column(
+                              children: [
+                                Image.asset('assets/images/rabbit.png',
+                                    height: 120),
+                                const Text(
+                                  'Rabbit',
+                                  style: TextStyle(color: Colors.black),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  // Row 4
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      // Column 1
+                      Column(
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              setState(() {
+                                // If select again then change to -1 (no border), otherwise set to 6 (with border)
+                                _selectedButtonIndex =
+                                    _selectedButtonIndex == 6 ? -1 : 6;
+                              });
+                            },
+                            style: TextButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                side: _selectedButtonIndex == 6
+                                    ? const BorderSide(
+                                        color: Color.fromARGB(
+                                            255, 0, 74, 173)) // Selected
+                                    : BorderSide.none, // Not selected
+                              ),
+                            ),
+                            child: Column(
+                              children: [
+                                Image.asset('assets/images/fish.png',
+                                    height: 120),
+                                const Text(
+                                  'Fish',
+                                  style: TextStyle(color: Colors.black),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      // Column 2
+                      Column(
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              setState(() {
+                                // If select again then change to -1 (no border), otherwise set to 7 (with border)
+                                _selectedButtonIndex =
+                                    _selectedButtonIndex == 7 ? -1 : 7;
+                              });
+                            },
+                            style: TextButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10),
+                                side: _selectedButtonIndex == 7
+                                    ? const BorderSide(
+                                        color: Color.fromARGB(
+                                            255, 0, 74, 173)) // Selected
+                                    : BorderSide.none, // Not selected
+                              ),
+                            ),
+                            child: Column(
+                              children: [
+                                Image.asset('assets/images/other.png',
+                                    height: 120),
+                                const Text(
+                                  'Other',
+                                  style: TextStyle(color: Colors.black),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+
+                  // Confirm button
+                  Container(
+                    margin: EdgeInsets.only(top: 30.0),
+                    child: FilledButton(
+                      onPressed: () {
+                        setState(() {
+                          // If any option is selected (not -1), change the button color to blue, otherwise grey
+                          _selectedButtonIndex != -1
+                              ? _confirmButton = 0
+                              : _selectedButtonIndex = -1;
+                        });
+                        // function to get the name of the selected pet
+                        String selectedPetName = getSelectedPetName();
+                        print('Selected Pet: $selectedPetName');
+                        
+                        // Navigate to CreatePetProfilePage (page made by 6488045) with the selected pet name
+                        // if (_selectedButtonIndex != -1) {
+                        //   Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //       builder: (context) => CreatePetProfilePage(
+                        //           selectedPetName: selectedPetName),
+                        //     ),
+                        //   );
+                        // }
+                      },
+                      style: ButtonStyle(
+                        backgroundColor: _selectedButtonIndex != -1
+                            ? MaterialStateProperty.all(
+                                Color.fromARGB(255, 0, 74, 173))
+                            : MaterialStateProperty.all(
+                                Color.fromARGB(255, 196, 196, 196)),
+                        minimumSize: MaterialStateProperty.all(
+                          Size(double.infinity, 40.0),
+                        ),
+                      ),
+                      child: const Text('Confirm'),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
